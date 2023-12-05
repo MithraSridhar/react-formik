@@ -6,6 +6,8 @@ import Authors from './components/Authors';
 import Books from './components/Books';
 import AddAuthor from './components/AddAuthor';
 import AddBook from './components/AddBook';
+import EditBook from './components/EditBook';
+import EditAuthor from './components/EditAuthor';
 
 function App() {
   return (
@@ -42,6 +44,8 @@ function App() {
     <Route path="/addauthor" element={<AddAuthor />} />
     <Route path="/books" element={<Books />} />
     <Route path="/authors" element={<Authors />} />
+    <Route path="/books/edit/:bookid" element={<EditBook />} />
+    <Route path="/authors/edit/:authorid" element={<EditAuthor />} />
 </Routes>
 
     </div>

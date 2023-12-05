@@ -3,11 +3,8 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
-import IconButton from '@mui/material/IconButton';
 
-function CardAuthor({author}) {
+function CardAuthor({author,deleteButton,editButton}) {
     return (
         <Card variant="outlined" sx={{backgroundColor:"#E2BB8C"}}>
         <React.Fragment>
@@ -23,12 +20,8 @@ function CardAuthor({author}) {
             </Typography>
           </CardContent>
           <CardActions>
-          <IconButton color='secondary' >
-                 <EditIcon/>
-                 </IconButton>
-                 <IconButton color='error' >
-                  <DeleteIcon/>
-                  </IconButton>
+         {editButton}
+          {deleteButton}      
           </CardActions>
         </React.Fragment>
         </Card>
